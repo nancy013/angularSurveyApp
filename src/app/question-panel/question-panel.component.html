@@ -1,0 +1,64 @@
+<span class="container" >
+   <div *ngIf="showPanel">
+    <div class="row">
+        <div class="col-sm-3" >
+            <label> Select a Question Type</label>
+        </div>
+        <!-- <div class="col-sm-2" >
+            <button> Cancel</button>
+        </div>  -->
+      </div>
+       <div class="row" style="padding-top:5px;"></div> 
+    <div class="row">
+      <div class="col-sm-4" style="background-color:lavender;">
+       <button (click)="textPopUp()"> Text Type</button>
+      </div>
+      <div class="col-sm-2" style="background-color:lavenderblush;">
+            
+        </div> 
+       <div class="col-sm-4" style="background-color:lavenderblush;">
+          <button (click)="numberPopUp()"> Number Type</button>
+      </div> 
+    </div>
+
+    </div>
+  
+<form  *ngIf="showTextForm" [formGroup]="textForm" (ngSubmit)="submitTextForm()">
+            <div class="form-group">
+                <input type="text" formControlName="textField" class="form-control"  />
+            </div>
+            <div class="form-group">
+                <label for="keyword">Keyword</label>
+                <input type="text" formControlName="keyword" class="form-control"  />
+            </div>
+            <div class="form-group">
+                <button>Add</button>
+            </div>
+</form>
+
+<form  *ngIf="showNumberForm" [formGroup]="numberForm" (ngSubmit)="submitNumberForm()">
+        <div class="form-group">
+            <input type="text" formControlName="numberField" class="form-control"  />
+        </div>
+        <div class="form-group">
+            <label for="keyword">Keyword</label>
+            <input type="text" formControlName="keyword" class="form-control"  />
+        </div>
+       <!--  <div class="form-group">
+                <label for="keyword">Mandatory</label>
+                <input type="radio" formControlName="mandatory" class="form-control" value="Yes" />
+            </div> -->
+        <div class="form-group">
+            <button>Add</button>
+        </div>
+</form>
+
+<div class="row">
+        <div class="col-sm-3" >
+            <button (click)=addNewQuestion();> Add New Question </button>
+        </div>
+        <!-- <div class="col-sm-2" >
+            <button> Cancel</button>
+        </div>  -->
+      </div>
+</span>

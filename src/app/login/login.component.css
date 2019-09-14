@@ -1,0 +1,12 @@
+/* #mainContainer{
+    box-align: centre;
+    border: 0em;
+} */
+
+#main1 {
+    width: 320px;
+    height: 100px;
+    padding: 0px;
+    border: 5px solid gray;
+    margin:70px ;
+}

@@ -1,0 +1,31 @@
+<div class="container">
+<h5>{{formTitle}}</h5>
+<!-- <form [formGroup]="dynamicForm"> -->
+<span >1.<label>{{labelQues1}}</label></span>
+<app-question-panel   (onAddNumberQuestion)="addQuestion2($event)"    (onAddTextQuestion)="addQuestion1($event)"></app-question-panel>
+<!-- </form> -->
+
+  <!-- <app-question-panel  [showQuesPanel]="showFlag" (onAddTextQuestion)="addQuestion1($event)"></app-question-panel> -->
+  <div style="padding-top:30px;"></div> 
+  <div  style="padding-top:5px;"></div> 
+  <button (click)="saveForm()"> Save Form</button>
+
+</div>
+
+
+<!-- <div class="panel-group" >
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h6 class="panel-title">
+            <button data-toggle="collapse" data-target="#collapse1">
+                2. &nbsp;<label> Add Question</label></button>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </h6>
+      </div>
+      <div id="collapse1" class="panel-collapse collapse in">
+        <div class="panel-body">
+        <app-question-panel  (onAddNumberQuestion)="addQuestion2($event)" (onAddTextQuestion)="addQuestion1($event)"></app-question-panel>
+      </div>
+      </div>
+    </div>
+  </div>  -->

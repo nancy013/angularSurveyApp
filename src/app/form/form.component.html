@@ -1,0 +1,31 @@
+<div  id="mainForm" class="container">
+  <!-- <div > -->
+      <h3>Create New Form</h3>
+      <form  (ngSubmit)="onSubmit()" #mainForm="ngForm">
+  
+        <div class="form-group">
+          <label for="title">Title</label>
+          <input type="text" class="form-control" required [(ngModel)]="form.formTitle"
+             [ngModelOptions]="{ updateOn: 'submit' }" name="title" #title="ngModel">
+          <div [hidden]="title.valid || title.pristine" class="alert alert-danger">
+            Form title is required
+          </div>
+        </div>
+  
+        <div class="form-group">
+          <label for="desc">Description</label>
+          <input type="text" class="form-control" required [(ngModel)]="form.formDesc"
+             [ngModelOptions]="{ updateOn: 'submit' }" name="desc" #desc="ngModel">
+          <div [hidden]="desc.valid || desc.pristine" class="alert alert-danger">
+            Description is required
+          </div>
+        </div>
+        
+        
+            <!-- <a [routerLink]="['/dynamicForm']" >Add Question</a> -->
+          
+          <button type="submit" class="btn btn-default" >Submit</button> &nbsp;
+        <button type="button" class="btn btn-default" (click)="mainForm.reset()">Cancel</button>
+      </form>
+    <!-- </div> -->
+    </div>
